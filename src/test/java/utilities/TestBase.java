@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
@@ -22,6 +23,7 @@ public abstract class TestBase {
     @After
     public void tearDown() throws Exception {
        // driver.close();
+        //driver.quit();
     }
 
     //Select Visible Text Dropdown
@@ -45,6 +47,20 @@ public abstract class TestBase {
             throw new RuntimeException(e);
         }
     }
+    //window handle
+    public void window (int index){
+        driver.switchTo().window(driver.getWindowHandles().toArray().toString());
+    }
+
+    // iframe handle
+    public void frameIndex(int index){
+        driver.switchTo().frame(index);
+    }
+
+
+
+
+
 }
 
 
