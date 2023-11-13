@@ -22,8 +22,8 @@ public abstract class TestBase {
 
     @After
     public void tearDown() throws Exception {
-       // driver.close();
-        //driver.quit();
+        driver.close();
+        driver.quit();
     }
 
     //Select Visible Text Dropdown
