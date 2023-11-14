@@ -42,7 +42,8 @@ public class C03_WindowsHandle extends TestBase {
         }
 
         /*
-        yukarida yazmis oldugumuz kod ile Handle degeri ilk sayfaya esit olmayana geciş yap diyerek kontrolumuz dısında acilan pencereye
+        yukarida yazmis oldugumuz kod ile Handle degeri ilk sayfaya esit olmayana
+        geciş yap diyerek kontrolumuz dısında acilan pencereye
         driveri gecirdik
          */
         Assert.assertEquals("New Window",driver.getTitle());

@@ -10,15 +10,20 @@ import java.util.List;
 
 public class C02_WindowHandle extends TestBase {
         /*
-        Eger bir sayfaya gittikten sonra yeni bir sekme ya da yeni bir pencere acmak istersek
-        bunun icin driver.switchTo().newWindow() methodunu kullanmaliyiz.
-        bu method parantez icinde yeni acilacak olan sayfain bir sekmemi yoksa bir yeni penceremi
+        Eger bir sayfaya gittikten sonra yeni bir sekme ya da yeni
+        bir pencere acmak istersek bunun icin driver.switchTo().newWindow()
+        methodunu kullanmaliyiz.
+        bu method parantez icinde yeni acilacak olan sayfain bir sekmemi
+        yoksa bir yeni penceremi
         oldugunu asagidaki kodlar ile yapabiliriz
 
-        1- driver.switchTo().newWindow(WindowType.WINDOW) yeni bir pencere acar ve buraya gecis yapar
-        2- driver.switchTo().newWindow(WindowType.TAB)yeni bir sekme acar ve buraya gecis yapar
+        1- driver.switchTo().newWindow(WindowType.WINDOW)
+        yeni bir pencere acar ve buraya gecis yapar
+        2- driver.switchTo().newWindow(WindowType.TAB)
+        yeni bir sekme acar ve buraya gecis yapar
 
-        eger handle degeri ile bir sayfaya gecis yapmak istersek bu defada driver.switchTo().window()
+        eger handle degeri ile bir sayfaya gecis yapmak istersek
+        bu defada driver.switchTo().window()
          methodunu kullanarak parantez icine
     gecis yapmak istedigimiz sayfanin handle degerini belirtmemiz yeterli
 
@@ -112,11 +117,12 @@ public class C02_WindowHandle extends TestBase {
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://www.linkedin.com");
 
-        List<String> windows = new ArrayList<>(driver.getWindowHandles()); //tüm pencerelerin handle degeri var
-        //set yerine list koyduk cünkü setlerde index yok.
+        List<String> windows = new ArrayList<>(driver.getWindowHandles()); //tüm pencerelerin
+        // handle degeri var. set yerine list koyduk cünkü setlerde index yok.
         /* Acilmis olan tüm pencerelerin ya da sekmelerin window handle degerlerini
-        gerWindowHandles methodu ile aldik
-        Bu method set return eder, ancak setler ile index kullanarak istedugumiz bir elemani secmemiz mümkün degildir
+        getWindowHandles methodu ile aldik
+        Bu method set return eder, ancak setler ile index kullanarak istedugumiz bir
+        elemani secmemiz mümkün degildir
         Bu nedenle bizde bu seti kullanarak bir tane List olusturduk
         Cünkü List lerde get methodu sayesinde index kullanarak istedigimiz sayfaya cok
         rahat gecis yapabiliriz
