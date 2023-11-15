@@ -38,13 +38,27 @@ public class C04_ActionsTest extends TestBase {
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@id='APjFqb']"));
         aramaKutusu.sendKeys(Keys.SHIFT,"selenium",Keys.SHIFT, " - java",Keys.ENTER);
 
+    }
 
-        /*ÖDEV:
+    @Test
+    public void test03() {
+
         //google sayfasına gidelim
+        driver.get("https://google.com");
+
         //Arama kutusuna "Selenium" yazın ve Enter tuşuna basın
+        WebElement aramaKutusu = driver.findElement(By.xpath("//*[@id='APjFqb']"));
+        aramaKutusu.sendKeys("Selenium", Keys.ENTER);
+
         //Arattığımız kelimeyi arama kutusundan ctrl+x ile keselim
+        Actions actions = new Actions(driver);
+        actions.keyDown(aramaKutusu, Keys.CONTROL).
+                sendKeys("A").sendKeys("X").
+                keyUp(Keys.CONTROL).perform();
+
+
+
         //Tekrar google sayfasına gidip kestiğimiz kelimeyi ctrl+v ile yapıştırıp tekrar aratalım
-        */
 
     }
 }

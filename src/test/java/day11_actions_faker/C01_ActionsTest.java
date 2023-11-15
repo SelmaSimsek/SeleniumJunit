@@ -17,7 +17,7 @@ public class C01_ActionsTest extends TestBase {
         // "Account" secenegine tikla
         Actions actions = new Actions(driver);
         WebElement accountLists = driver.findElement(By.cssSelector("#nav-link-accountList"));
-
+        actions.moveToElement(accountLists).perform();
 
         driver.findElement(By.xpath("//span[.='Account']")).click();
 

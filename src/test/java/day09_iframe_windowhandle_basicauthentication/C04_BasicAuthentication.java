@@ -10,7 +10,7 @@ public class C04_BasicAuthentication extends TestBase {
 
     @Test
     public void test01() {
-        //Aşağıdaki bilgileri kullanarak authentication yapınız:
+        //Aşağıdaki  bilgileri kullanarak authentication yapınız:
         //    Url: https://the-internet.herokuapp.com/basic_auth
         //    Username: admin
         //    Password: admin
