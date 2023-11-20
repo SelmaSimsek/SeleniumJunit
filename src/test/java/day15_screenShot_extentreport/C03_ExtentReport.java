@@ -39,7 +39,7 @@ public class C03_ExtentReport {
         //olusturulmasini saglar
         extentReports.attachReporter(extentHtmlReporter);
 
-        //Html raporunun belge basligini ayarlar, bu baslik sekme üzerinde görünür.
+         //Html raporunun belge basligini ayarlar, bu baslik sekme üzerinde görünür.
         extentHtmlReporter.config().setDocumentTitle("Batch 189 Test Reports");
 
         //Raporun adini ayarladik. Bu raporda görünecek olan genel baslik

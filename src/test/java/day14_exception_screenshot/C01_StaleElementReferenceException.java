@@ -22,7 +22,7 @@ public class C01_StaleElementReferenceException extends TestBase {
      */
     /*
     ==> InvalidSelectorException -> Belirtilen bir locator gecersiz oldugunda ortaya cikar
-    ==> WebDriverException -> WebDriver ile ilgili kurulum ya da versiyon
+    ==> WebDriverException -> WebDriver ile ilgili kurulum ya da versiyon uyumsuzluklari
     ==> ElementClickInterceptedException ->  Bir webelementin baska bir webelement
     (pop-up, reklam) tarafindan engellenmesi
     ==> ElementNotInteractable -> Bir webelement üzerinde cesitli islemler yapmaya elverisli degilse
@@ -69,7 +69,7 @@ public class C01_StaleElementReferenceException extends TestBase {
 
         //Genişliği 225 ve Uzunluğu 225 olan resimlerin hepsine tıklayalım
         //Her sayfanın sayfa başlığını yazdıralım
-        List<WebElement> products = driver.findElements(By.xpath("//*[@width='225' and @height='225']"));
+         List<WebElement> products = driver.findElements(By.xpath("//*[@width='225' and @height='225']"));
 
         for (int i = 0; i < products.size(); i++) {
 

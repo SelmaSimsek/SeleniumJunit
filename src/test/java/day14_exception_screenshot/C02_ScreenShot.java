@@ -18,7 +18,7 @@ public class C02_ScreenShot extends TestBase {
     3- File classindan write() methodunu kullanarak icine parametre olarak neyi nereye
     kaydedelim bunu belirtiriz
         getScreenShotAs() methodu ile ekran gorunutusunu alarak bu gorunutuyu kaydetmek icin
-        almis oldugumuz dosya yolunu beliritiriz
+        almis oldugumuz dosya yolunu belirtiriz
      */
 
     @Test
