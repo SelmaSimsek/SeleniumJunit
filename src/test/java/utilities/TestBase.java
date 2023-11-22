@@ -5,10 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -74,7 +71,7 @@ public abstract class TestBase {
 
     @After
     public void tearDown() throws Exception {
-       driver.close();
+       //driver.close();
        // driver.quit();
     }
 
@@ -137,6 +134,43 @@ public abstract class TestBase {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    //JsExecutor Click Method
+    public void jsClick(WebElement webElement){
+        try {
+            webElement.click();
+        } catch (Exception e) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();",webElement);
+        }
+    }
+    //JS Executor Scroll WebElement Method
+    public void jsScroll(WebElement webElement){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("argument[0].scrollIntoView(true)",webElement);
+    }
+
+    //JS Executor Scroll End
+    public void jsScrollToEnd(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+
+
+    //JS Executor Scroll Home
+    public void jsScrollToHome(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+    //JS Executor SenKeys
+    public void jsSendKeys (WebElement webElement, String value){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value='"+value+"'",webElement);
+
+
+
     }
 
 }
