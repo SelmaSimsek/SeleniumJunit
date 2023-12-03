@@ -13,7 +13,7 @@ public class C01ReadExcel {
     @Test
     public void test01() throws IOException {
         //1-Projemize resouces packege i altida bulunan excel dosyamizin yolunu belirtmeliyiz
-        String path = "\\src\\test\\java\\resources\\Capitals.xlsx";
+        String path = "src\\test\\java\\resources\\Capitals.xlsx";
 
         //2-FileInputStream classini kullanarak bir stream olusturduk ve akis ile
         //dosyamizdan geken datayi java ortamina aktaracagiz.

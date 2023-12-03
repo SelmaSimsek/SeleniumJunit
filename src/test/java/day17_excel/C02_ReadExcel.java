@@ -26,8 +26,10 @@ public class C02_ReadExcel {
         //Örnek 1: Capitals.xlsx dosyasından 1. satır 2. sütundaki hücreyi yazdırın
         String path="src\\test\\java\\resources\\Capitals.xlsx";
         FileInputStream fis=new FileInputStream(path);
+        //Index o dan baslar dolayisiyla birinci satiri secmek icin 1 dememiz gerekir
+        //ikinci sütini secmek icin index e 1 yazmaliyiz
         Workbook workbook=WorkbookFactory.create(fis);
-        workbook.getSheet("Sheet1").getRow(0).getCell(1);
+        Cell cell =  workbook.getSheet("Sheet1").getRow(0).getCell(1);
 
         //Örnek 2: 3. Satır 1. sütun değerini yazdırın ve "France" olduğunu test edin
         String actualcellValue = workbook.getSheet("Sheet1").getRow(2).getCell(0).toString();
@@ -45,6 +47,7 @@ public class C02_ReadExcel {
         //getLastRowNum(); methodu bir excel calisma sayfasindaki son satirin indexsini verir
         //index 0 dan basladii icin bu sayfada eger toplam 5 satir varsa bu method 4 verir
         System.out.println(workbook.getSheet("Sheet1").getLastRowNum());
+
 
         //Örnek 5: Excel sayfasindaki datalari COUNTRY,CAPITALS (Ülke-Başkent) key-value şeklinde console a yazdiriniz
         // {{USA,D.C},{FRANCE,PARIS}....}

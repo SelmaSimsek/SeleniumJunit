@@ -17,8 +17,6 @@ public class C04_WriteExcel {
         String path = "src\\test\\java\\resources\\mysmoketestdata.xlsx";
         FileInputStream fis = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fis);
-
-        //mysmoketestdata.xlsx dosyasina STATUS adinda ucuncu bir sutun olusturunuz,
         Sheet sheet =  workbook.getSheet("customer_info");
         Row row = sheet.getRow(0);
         //3.sütun basligini olusturduk
@@ -28,11 +26,14 @@ public class C04_WriteExcel {
 
         sheet.getRow(1).createCell(2).setCellValue("valid");
         sheet.getRow(2).createCell(2).setCellValue("valid");
+
+        //dördüncü satirın ücüncü hücresını olustur ve degerını invalid olarak ata
         sheet.getRow(3).createCell(2).setCellValue("invalid");
 
+        //Dosyaya yazmak icin bir sistemden cikis akisi olusturur
         FileOutputStream fos = new FileOutputStream(path);
 
-
+        //Excel dosyasina yapilan degisiklikleri yazar
         workbook.write(fos);
         fis.close();
         fos.close();
